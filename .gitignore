@@ -1,0 +1,6 @@
+/app.yaml
+/node_modules
+/Frontend/node_modules
+/Frontend/build
+/Backend/config
+/Backend/node_modules

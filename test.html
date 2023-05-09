@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .whatsapp-signin {
+            background-color: #25D366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+          }
+          
+          /* Add hover effect */
+          .whatsapp-signin:hover {
+            background-color: #128C7E;
+          }
+          
+          
+          
+          
+          
+    </style>
+    <button id="sigin"class="whatsapp-signin">Sign in with WhatsApp</button>
+
+
+<script type="text/javascript">
+    const addScript=()=>{
+        const script = document.createElement("script");
+        script.src = "https://otpless.com/auth.js";
+        document.body.appendChild(script);
+    }
+    document.getElementById('signin').addEventListener('click',()=>{
+        addScript()
+
+    })
+    const searchParams = new URLSearchParams(window.location.search);
+    if(searchParams.get("qr_ref_id")){
+        addScript()
+    };
+     
+  function otpless(otplessUser) {
+   alert(JSON.stringify(otplessUser));
+  }
+</script>
+</body>
+</html>
