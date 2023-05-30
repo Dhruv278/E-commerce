@@ -32,10 +32,7 @@ const Login = () => {
     }, [dispatch, alert, error, isAuthenticated])
     
     useEffect(() => {
-        const script = document.createElement("script");
-        script.src = "https://otpless.com/auth.js";
-        document.body.appendChild(script);
-     
+       
         window.otpless = (otplessUser) => {
          dispatch(loginWithOtpless(otplessUser.email.email));
         };
