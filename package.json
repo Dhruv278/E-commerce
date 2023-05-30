@@ -8,9 +8,9 @@
   },
   "scripts": {
     "prepare":"cd Frontend & npm i & npm build",
-    "start": "node index.js",
-    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/ index",
-    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/ index",
+    "start": "node server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/ server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/ server",
     "seeder": "node utils/seeder.js",
     "deploy":"cd Frontend & npm run build & cd.. & gcloud app deploy"
   },
