@@ -2,7 +2,7 @@
 const dotenv=require("dotenv");
 dotenv.config({path:"./backend/config/config.env"});
 const app=require("./Backend/app");
-const connectDatabase=require(`${__dirname}/Backend/config/database`);
+const connectDatabase=require(`./Backend/config/database`);
 
 
 process.on('uncaughtException',err=>{

@@ -2,5 +2,5 @@
 /node_modules
 /Frontend/node_modules
 /Frontend/build
-/Backend/config
+/Backend/config/config.env
 /Backend/node_modules
