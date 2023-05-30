@@ -1,7 +1,7 @@
 
 const dotenv=require("dotenv");
 dotenv.config({path:"./backend/config/config.env"});
-const connectDatabase=require('./Backend/config/database');
+const connectDatabase=require(`${__dirname}/Backend/config/database`);
 
 const app=require("./Backend/app");
 
