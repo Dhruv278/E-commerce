@@ -31,17 +31,7 @@ const Login = () => {
     
     }, [dispatch, alert, error, isAuthenticated])
     
-    useEffect(() => {
-       
-        window.otpless = (otplessUser) => {
-         dispatch(loginWithOtpless(otplessUser.email.email));
-        };
-
-        return () => {
-
-            document.body.removeChild(script);
-        }
-       }, []);
+   
        
   const submitHandler=(e)=>{
     e.preventDefault();

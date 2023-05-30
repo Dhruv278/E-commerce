@@ -6,8 +6,10 @@ import MetaData from '../layouts/MetaData'
 import { Link, useNavigate } from 'react-router-dom'
 import { register, clearErrors,setError } from '../../actions/userAction'
 import Resizer from "react-image-file-resizer";
-
+import { useSearchParams } from 'react-router-dom'
 const Register = () => {
+    const [searchParams] = useSearchParams();
+    const redirect=searchParams.get('redirect') ?'/shipping':'/'
     const navigate = useNavigate();
     const alert=useAlert();
     const dispatch = useDispatch();
@@ -24,7 +26,19 @@ const Register = () => {
 
 
     
-
+    useEffect(() => {
+       
+       
+    
+        if (isAuthenticated) {
+           navigate(redirect)
+        }
+        if (error) {
+            alert.error(error);
+            dispatch(clearErrors());
+        }
+    
+    }, [dispatch, alert, error, isAuthenticated])
 
     const submitHandler = (e) => {
         e.preventDefault();

@@ -9,7 +9,7 @@ const jwt=require('jsonwebtoken');
 const {template}=require('../utils/emailTemplate')
 
 exports.registerUser=catchAsync(async(req,res,next)=>{
-    
+    console.log("calling    dsdasd")
     const {name,email,password}=req.body;
     let result
     if(req.body.avatar!==""){
