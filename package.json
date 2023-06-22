@@ -2,15 +2,15 @@
   "name": "ecommerce",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
     "prepare":"cd Frontend & npm i & npm build",
-    "start": "node server.js",
-    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/ server",
-    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/ server",
+    "start": "node index.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/ index",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/ index",
     "seeder": "node utils/seeder.js",
     "deploy":"cd Frontend & npm run build & cd.. & gcloud app deploy"
   },
